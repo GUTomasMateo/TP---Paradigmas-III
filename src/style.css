@@ -1,0 +1,213 @@
+    :root{
+      --bg-light: #f6f7fb;
+      --card-light: #ffffff;
+      --ink-light: #1f2937;
+      --muted-light: #6b7280;
+      --brand: #ba2525;
+      --ring: rgba(37, 99, 235, .15);
+
+      --bg-dark: #1a1a1a;
+      --card-dark: #2a2a2a;
+      --ink-dark: #e5e7eb;
+      --muted-dark: #9ca3af;
+
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --card: var(--card-light);
+      --ink: var(--ink-light);
+      --muted: var(--muted-light);
+    }
+
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --card: var(--card-dark);
+      --ink: var(--ink-dark);
+      --muted: var(--muted-dark);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+      transition: background 0.3s, color 0.3s;
+    }
+    img{ max-width: 100%; height: auto; display: block; }
+    a{ color: var(--brand); text-decoration: none; position: relative; }
+    a:hover{ text-decoration: underline; }
+
+    .container{ width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
+    header{
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+      height: 70px;
+    }
+    [data-theme="dark"] header {
+      background: rgba(30,30,30,.85);
+      border-bottom-color: #3a3a3a;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;    /* respeta la proporción */
+      object-fit: contain;
+    }
+    .nav{ display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; gap: 1rem; }
+    .brand{ font-weight: 700; letter-spacing: .2px; }
+    .brand span{ color: var(--brand); }
+    .menu{ display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; }
+
+    .theme-toggle {
+      border: none;
+      background: var(--card);
+      color: var(--ink);
+      padding: .5rem .8rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    .theme-toggle:hover {
+      background: var(--brand);
+      color: white;
+    }
+
+    footer{ border-top: 1px solid #e5e7eb; padding: 1.5rem 0; color: var(--muted); font-size: .95rem; }
+    [data-theme="dark"] footer { border-top-color: #3a3a3a; }
+
+    /* Estilos para tooltip de contacto */
+    .contact-tooltip {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card);
+      color: var(--ink);
+      border: 1px solid var(--muted);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(8, 8, 8, 0.219);
+      width: 220px;
+      white-space: nowrap;
+      z-index: 20;
+    }
+
+  .contact-tooltip .row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .contact-tooltip .row:last-child {
+    margin-bottom: 0;
+  }
+
+    a#contacto:hover .contact-tooltip {
+    display: inline-block;
+    align-items: middle;
+    gap: 0.1rem;
+    }
+
+    .contact-tooltip img {
+      width: 20px;
+      vertical-align: inline-block;
+      margin-right: 0.3rem;
+    }
+
+    /* Sección de productos */
+    .products {
+      padding: 2rem 0;
+    }
+    .products h2 {
+      margin-bottom: 1rem;
+    }
+    /* Lista de productos */
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    /* Tarjetas de los productos */
+    .product-card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    /* Imagenes de los productos */
+    .product-card img {
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    /* Botón de Ver en ML */
+    .product-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.4rem;
+      background: var(--brand);
+      color: #ffffff;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    /* Botón de agregar al carrito */
+    .add-to-cart {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--brand);
+      color: #ffffff;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    /* Color de los botones: Agregar al carrito y Ver en ML */
+    .product-card a:hover {
+      background: #1f1f20c8;
+    }
+    
+    /* Botón de agregar al carrito - Parte nueva 19/08*/
+    #cart {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(248, 215, 1, 0.1);
+    }
+    #cart ul {
+      list-style: none;
+      padding: 0;
+    }
+    #cart li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .5rem;
+    }
+    #checkoutBtn {
+      padding: 0.7rem 1.5rem;
+      border: none;
+      background: var(--brand);
+      color: rgb(251, 251, 251);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    /* Color del botón de checkout */
+    #checkoutBtn:hover {
+      background: #1f1f20c8;
+    }
+    /* Hasta aca el adelanto del 19/08 */
