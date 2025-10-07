@@ -5,27 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AIKOR Powerlifting</title>
   <meta name="description" content="AIKOR: Formación de atletas de alto rendimiento en Powerlifting." />
-  <link rel="stylesheet" href="src\style.css" />
+  <link rel="stylesheet" href="src/style.css" />
 </head>
 
 <body>
   <header>
     <div class="container nav" role="navigation" aria-label="Principal">
-      <nav class="logo">
-        <img src="resource\Logo.webp" alt="Logo AIKOR Powerlifting" />
-      </nav>
-      <nav class="brand"> AIKOR <span>Powerlifting</span> </nav>
-      <nav class="menu">
+      <div class="logo">
+        <img src="resource/logo.webp" alt="Logo AIKOR Powerlifting" />
+      </div>
+      <div class="brand"> AIKOR <span>Powerlifting</span> </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <nav class="menu" id="menu">
         <a href="#nosotros">Nosotros</a>
         <a href="#mision">Misión</a>
         <a href="#contacto" id="contacto">Contacto
           <div class="contact-tooltip">
-              <div class="row">
-                <img src="resource\Logo Warap.webp" alt="WhatsApp"/> +54 9 11 1234-5678
-              </div>
-              <div class="row">
-                <img src="resource\Logo Insta.webp" alt="Instagram"/> @aikor.powerlifting
-              </div>
+            <div class="row">
+              <img src="resource/logo_warap.webp" alt="WhatsApp" /> +54 9 11 1234-5678
+            </div>
+            <div class="row">
+              <img src="resource/logo_insta.webp" alt="Instagram" /> @aikor.powerlifting
+            </div>
           </div>
         </a>
         <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">☀️</button>
@@ -66,7 +71,7 @@
       <h2>Productos de AIKOR</h2>
       <div class="product-list">
         <div class="product-card"> 
-          <img src="resource\Sales V4.webp" alt="Sales de Amoniaco V4">
+          <img src="resource/sales_v4.webp" alt="Sales de Amoniaco V4">
           <h3>Sales de Amoniaco V4</h3>
           <button class="add-to-cart" data-name="Sales de Amoniaco V4" data-price="5000">
             Agregar al carrito
@@ -74,7 +79,7 @@
           <a href="https://www.mercadolibre.com.ar/sales-de-amoniaco-v4-aikor-mega-intenso/up/MLAU3216716376?pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=MLAU3216716376&wid=MLA1502060195&position=1&search_layout=grid&type=product&tracking_id=dd88bae4-6977-4f7b-8612-dde2c7b6605e&sid=search" target="_blank">Ver en Mercado Libre</a>
         </div>
         <div class="product-card">
-          <img src="resource\Sales V3.webp" alt="Sales de Amoniaco V3">
+          <img src="resource/sales_v3.webp" alt="Sales de Amoniaco V3">
           <h3>Sales de Amoniaco V3</h3>
           <button class="add-to-cart" data-name="Sales de Amoniaco V3" data-price="5000">
             Agregar al carrito
@@ -82,7 +87,7 @@
           <a href="https://www.mercadolibre.com.ar/sales-de-amoniaco-para-powerlifting/up/MLAU3022905649?pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=MLAU3022905649&wid=MLA2018188898&position=2&search_layout=grid&type=product&tracking_id=70dfd83f-bbcc-4b50-8fbb-08677f209912&sid=search" target="_blank">Ver en Mercado Libre</a>
         </div>
         <div class="product-card">
-          <img src="resource\Sales V2.webp" alt="Sales de Amoniaco V2">
+          <img src="resource/sales_v2.webp" alt="Sales de Amoniaco V2">
           <h3>Sales de Amoniaco V2</h3>
           <button class="add-to-cart" data-name="Sales de Amoniaco V2" data-price="5000">
             Agregar al carrito
@@ -90,7 +95,7 @@
           <a href="https://articulo.mercadolibre.com.ar/MLA-1975161716-sales-de-amoniaco-para-powerlifting-_JM?searchVariation=182511360900&pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=182511360900&position=4&search_layout=grid&type=item&tracking_id=d8e66078-f1ac-4e52-bb10-12038dd3e385" target="_blank">Ver en Mercado Libre</a>
         </div>
         <div class="product-card">
-          <img src="resource\Mini Gym Aikor (decoración).webp" alt="Mini Gym Aikor">
+          <img src="resource/mini_gym_aikor.webp" alt="Mini Gym Aikor">
           <h3>Mini Gym Decorativo Aikor</h3>
           <button class="add-to-cart" data-name="Mini Gym Aikor" data-price="5000">
             Agregar al carrito
@@ -98,7 +103,7 @@
           <a href="https://www.mercadolibre.com.ar/mini-gym-aikor-decoracion/up/MLAU3204842193?pdp_filters=seller_id%3A2149112701#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=1&reco_backend_type=low_level&reco_id=a3f3b82c-4367-43a8-abd8-65b70c918ba1&wid=MLA1501171891&sid=recos" target="_blank">Ver en Mercado Libre</a>
         </div>
         <div class="product-card">
-          <img src="resource\Magnecio Liquido.webp" alt="Magnecio Liquido">
+          <img src="resource/magnecio_liquido.webp" alt="Magnecio Liquido">
           <h3>Magnecio Liquido Aikor</h3>
           <button class="add-to-cart" data-name="Magnecio Liquido" data-price="10000">
             Agregar al carrito
@@ -123,11 +128,13 @@
     </div>
   </footer>
 
-  <!-- Adelanto para la seccion de carrito - 19/08 -->
-  
-  <script src="js\carrito.js"></script>
-<!-- Hasta aca esta el adelanto del 19/08 -->
+  <!-- Adelanto para la seccion de carrito - 07/10 -->
+  <script src="js/menu.js"></script>
 
-  <script src="js\modos.js"></script>
+  <!-- Adelanto para la seccion de carrito - 25/09 -->
+  <script src="js/carrito.js"></script>
+
+  <!-- Hasta aca esta el adelanto del 26/08 -->
+  <script src="js/modos.js"></script>
 </body>
 </html>
