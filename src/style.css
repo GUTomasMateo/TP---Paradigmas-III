@@ -185,6 +185,10 @@ a#contacto:hover .contact-tooltip {
   border-radius: var(--radius);
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: space-between;
 }
 
 /* Imagenes de los productos */
@@ -310,4 +314,37 @@ a#contacto:hover .contact-tooltip {
   a#contacto:hover .contact-tooltip {
     display: block;
   }
+}
+
+/* Botones de filtro de productos */
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filters button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters button:hover {
+  background: #1f1f20c8; /* mismo hover que el resto de los botones */
+  transform: translateY(-2px);
+}
+
+/* Estado activo del filtro */
+.filters button.active {
+  background: #1f1f20c8;
+  transform: scale(1.05);
 }
