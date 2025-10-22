@@ -8,17 +8,11 @@
   <link rel="stylesheet" href="src/style.css" />
 </head>
 
+<!-- Adelanto script del plugin mixitup - 21/10 -->
 <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
 
-<script>
-  const filterButtons = document.querySelectorAll('.filters button');
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-</script>
+<!-- Adelanto para la seccion de filtros de productos - 21/10 -->
+<script src="js/botones_filtros.js"></script>
 
 <body>
   <header>
@@ -155,15 +149,7 @@
   <!-- Hasta aca esta el adelanto del 26/08 -->
   <script src="js/modos.js"></script>
   
-  <script>
-    var mixer = mixitup('.product-list', {
-      selectors: {
-        target: '.product-card'
-      },
-      animation: {
-        duration: 300
-      }
-    });
-  </script>
+  <!-- Adelanto para la seccion de animacion del plugin - 21/10 -->
+  <script src="js/animacion_plugin.js"> </script>
 </body>
 </html>
