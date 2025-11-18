@@ -1,4 +1,4 @@
-# Trabajo Práctico - N°2
+# Trabajo Integrador
 
 **Materia:** Paradigmas 3.
 
@@ -8,4 +8,4 @@
 
 **Comisión:** Comisión Unica.
 
-**Fecha de Entrega:** 07/10.
+**Fecha de Entrega:** 18/11.
