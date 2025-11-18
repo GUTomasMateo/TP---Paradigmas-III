@@ -81,52 +81,21 @@
         <button type="button" data-filter=".magnesio">Magnesio Líquido</button>
         <button type="button" data-filter=".decorativo">Decorativos</button>
       </div>
-      <div class="product-list">
-        <div class="product-card mix amoniaco"> 
-          <img src="resource/sales_v4.webp" alt="Sales de Amoniaco V4">
-          <h3>Sales de Amoniaco V4</h3>
-          <button class="add-to-cart" data-name="Sales de Amoniaco V4" data-price="5000">
-            Agregar al carrito
-          </button>
-          <a href="https://www.mercadolibre.com.ar/sales-de-amoniaco-v4-aikor-mega-intenso/up/MLAU3216716376?pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=MLAU3216716376&wid=MLA1502060195&position=1&search_layout=grid&type=product&tracking_id=dd88bae4-6977-4f7b-8612-dde2c7b6605e&sid=search" target="_blank">Ver en Mercado Libre</a>
-        </div>
-        <div class="product-card mix amoniaco">
-          <img src="resource/sales_v3.webp" alt="Sales de Amoniaco V3">
-          <h3>Sales de Amoniaco V3</h3>
-          <button class="add-to-cart" data-name="Sales de Amoniaco V3" data-price="5000">
-            Agregar al carrito
-          </button>
-          <a href="https://www.mercadolibre.com.ar/sales-de-amoniaco-para-powerlifting/up/MLAU3022905649?pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=MLAU3022905649&wid=MLA2018188898&position=2&search_layout=grid&type=product&tracking_id=70dfd83f-bbcc-4b50-8fbb-08677f209912&sid=search" target="_blank">Ver en Mercado Libre</a>
-        </div>
-        <div class="product-card mix amoniaco">
-          <img src="resource/sales_v2.webp" alt="Sales de Amoniaco V2">
-          <h3>Sales de Amoniaco V2</h3>
-          <button class="add-to-cart" data-name="Sales de Amoniaco V2" data-price="5000">
-            Agregar al carrito
-          </button>
-          <a href="https://articulo.mercadolibre.com.ar/MLA-1975161716-sales-de-amoniaco-para-powerlifting-_JM?searchVariation=182511360900&pdp_filters=seller_id%3A2149112701#polycard_client=search-nordic&searchVariation=182511360900&position=4&search_layout=grid&type=item&tracking_id=d8e66078-f1ac-4e52-bb10-12038dd3e385" target="_blank">Ver en Mercado Libre</a>
-        </div>
-        <div class="product-card mix decorativo">
-          <img src="resource/mini_gym_aikor.webp" alt="Mini Gym Aikor">
-          <h3>Mini Gym Decorativo Aikor</h3>
-          <button class="add-to-cart" data-name="Mini Gym Aikor" data-price="5000">
-            Agregar al carrito
-          </button>
-          <a href="https://www.mercadolibre.com.ar/mini-gym-aikor-decoracion/up/MLAU3204842193?pdp_filters=seller_id%3A2149112701#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=1&reco_backend_type=low_level&reco_id=a3f3b82c-4367-43a8-abd8-65b70c918ba1&wid=MLA1501171891&sid=recos" target="_blank">Ver en Mercado Libre</a>
-        </div>
-        <div class="product-card mix magnesio">
-          <img src="resource/magnecio_liquido.webp" alt="Magnecio Liquido">
-          <h3>Magnecio Liquido Aikor</h3>
-          <button class="add-to-cart" data-name="Magnecio Liquido" data-price="10000">
-            Agregar al carrito
-          </button>
-          <a href="https://www.mercadolibre.com.ar/remera-aikor-powerlifting/up/MLAU3204842193?pdp_filters=seller_id%3A2149112701#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=2&reco_backend_type=low_level&reco_id=a3f3b82c-4367-43a8-abd8-65b70c918ba1&wid=MLA1501171891&sid=recos" target="_blank">Ver en Mercado Libre</a>
+      <div class="product-list" id="productList"></div>
     </section>
     
     <!-- Adelanto para la tienda - 19/08 -->
     
     <section id="tienda" class="container">
       <h2>Carrito de Compras</h2>
+      
+      <div id="checkoutForm">
+        <h3>Datos del comprador</h3>
+        <input id="nombre" type="text" placeholder="Nombre">
+        <input id="apellido" type="text" placeholder="Apellido">
+        <input id="telefono" type="text" placeholder="Teléfono">
+      </div>
+
       <div id="cart"></div>
       <button id="checkoutBtn">Pagar con Mercado Pago</button>
     </section>
@@ -139,6 +108,9 @@
       © <span id="year"></span> AIKOR Powerlifting · Todos los derechos reservados
     </div>
   </footer>
+
+  <!-- Adelanto para la seccion de la carga de productos - 18/11 -->
+  <script src="js/cargar_productos.js"></script>
 
   <!-- Adelanto para la seccion del menu - 07/10 -->
   <script src="js/menu.js"></script>
